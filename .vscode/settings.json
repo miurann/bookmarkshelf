@@ -1,0 +1,7 @@
+{
+  "json.schemas": [],
+  // Markdownの場合は空白トリミングは実施しない
+  "[markdown]": {
+    "files.trimTrailingWhitespace": false
+  }
+}
