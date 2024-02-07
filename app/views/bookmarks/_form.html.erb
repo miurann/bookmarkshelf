@@ -1,0 +1,20 @@
+<%= form_with(model: bookmark) do |form| %>
+  <%= render 'shared/error_messages', object: form.object %>
+
+    <%= form.label :title, style: "display: block" %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :url, style: "display: block" %>
+    <%= form.text_field :url %>
+  </div>
+
+  <div class="field">
+      <%= form.label :memo %><br />
+      <%= form.text_field :memo %>
+  </div>
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
