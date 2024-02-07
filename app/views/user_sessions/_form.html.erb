@@ -1,14 +1,13 @@
-# app/views/user_sessions/_form.html.erb
-<%= form_with url: login_path, method: :post do |f| %>
+<%= form_with url: login_path, method: :post do |form| %>
   <div class="field">
-    <%= f.label :email, User.human_attribute_name(:email) %><br />
-    <%= f.text_field :email %>
+    <%= form.label :email, User.human_attribute_name(:email) %><br />
+    <%= form.text_field :email, class: 'input input-bordered input-sm w-full max-w-xs my-3' %>
   </div>
   <div class="field">
-    <%= f.label :password, User.human_attribute_name(:password) %><br />
-    <%= f.password_field :password %>
+    <%= form.label :password, User.human_attribute_name(:password) %><br />
+    <%= form.password_field :password, class: 'input input-bordered input-sm w-full max-w-xs my-3' %>
   </div>
   <div class="actions">
-    <%= f.submit t('defaults.login') %>
+    <%= form.submit t('defaults.login'), class:'btn btn-primary' %>
   </div>
 <% end %>
