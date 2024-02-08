@@ -1,2 +1,8 @@
-<h1>Bookmarks#index</h1>
-<p>Find me in app/views/bookmarks/index.html.erb</p>
+<h1><%= t'.title' %></h1>
+        <% if @bookmarks.present? %>
+          <div class="flex flex-row">
+            <%= render @bookmarks %>
+          </div>
+        <% else %>
+          <p><%= t('.no_result') %></p>
+        <% end %>

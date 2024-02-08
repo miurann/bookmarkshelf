@@ -3,6 +3,8 @@ ja:
     login: 'ログイン'
     register: '登録'
     logout: 'ログアウト'
+    message:
+      require_login: 'ログインしてください'
   users:
     new:
       title: 'ユーザー登録'
@@ -15,6 +17,7 @@ ja:
   bookmarks:
     index:
       title: 'ブックマーク一覧'
+      no_result: 'ブックマークがありません'
     new:
       title: 'ブックマーク登録'
     show:
