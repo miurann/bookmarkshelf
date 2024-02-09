@@ -46,6 +46,7 @@ gem "bootsnap", require: false
 
 gem 'cssbundling-rails'
 gem 'rails-i18n', '~> 7.0.0'
+gem 'ransack', '~> 4.1'
 gem 'sorcery'
 
 group :development, :test do

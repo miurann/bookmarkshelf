@@ -6,3 +6,6 @@
         <% else %>
           <p><%= t('.no_result') %></p>
         <% end %>
+<div class="mt-6 w-auto">
+  <%= render 'search_form', url: bookmarks_path %>
+</div>

@@ -3,6 +3,8 @@ ja:
     login: 'ログイン'
     register: '登録'
     logout: 'ログアウト'
+    search: '検索'
+    keyword_search: 'キーワード検索'
     message:
       require_login: 'ログインしてください'
   users:
