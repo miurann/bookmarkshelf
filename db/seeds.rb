@@ -1,4 +1,4 @@
-30.times do |index|
+70.times do |index|
   Bookmark.create!(
       user: User.first,
       title: Faker::JapaneseMedia::StudioGhibli.movie,

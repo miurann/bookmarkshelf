@@ -9,20 +9,14 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
   </head>
-  <div id="nav">
-    <% if current_user %>
-      <%= link_to "Edit Profile", edit_user_path(current_user.id) %>
-      <%= button_to "Logout", :logout, method: :delete %>
-    <% else %>
-      <%= link_to "Register", new_user_path %> |
-      <%= link_to "Login", :login %>
-    <% end %>
-  </div>
   <div>
     <p id="notice"><%= flash[:notice] %></p>
     <p id="alert"><%= flash[:alert] %></p>
   </div>
-  <body class="container mx-auto">
+  <body class="p-0">
+  <div class="w-screen h-screen bg-cover bg-fixed bg-[url('background06.png')]">
+  <%= render 'shared/header' %>
     <%= yield %>
+  </div>
   </body>
 </html>
