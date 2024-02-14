@@ -1,2 +1,10 @@
-<h1>Bookmarks#show</h1>
-<p>Find me in app/views/bookmarks/show.html.erb</p>
+<div class="card w-1/3 bg-base-100 shadow-xl mx-auto mt-20 max-h-full">
+  <div class="card-body">
+    <h2 class="card-title"><%= @bookmark.title %></h2>
+    <%= link_to @bookmark.url, @bookmark.url, class:'link link-primary', target: '_blank' %>
+    <p><%= @bookmark.memo %></p>
+    <div class="card-actions justify-end">
+      <button class="btn btn-primary">Buy Now</button>
+    </div>
+  </div>
+</div>
