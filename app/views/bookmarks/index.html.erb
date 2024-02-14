@@ -1,11 +1,25 @@
-<h1><%= t'.title' %></h1>
-        <% if @bookmarks.present? %>
-          <div class="flex flex-row">
-            <%= render @bookmarks %>
-          </div>
-        <% else %>
-          <p><%= t('.no_result') %></p>
-        <% end %>
+<div class="mt-4 relative">
+  <% if @bookmarks.present? %>
+    <div class="flex flex-wrap">
+      <%= render @bookmarks %>
+    </div>
+  <% else %>
+    <p><%= t('.no_result') %></p>
+  <% end %>
+  <div class="absolute top-40">
+    <div class="flex flex-col">
+      <div class="h-40">
+        <%= image_tag 'woodframe03.jpg' %>
+      </div>
+      <div class="h-40">
+        <%= image_tag 'woodframe03.jpg' %>
+      </div>
+      <div class="h-40">
+        <%= image_tag 'woodframe03.jpg' %>
+      </div>
+    </div>
+  </div>
+</div>
 <div class="mt-6 w-auto">
   <%= render 'search_form', url: bookmarks_path %>
 </div>
