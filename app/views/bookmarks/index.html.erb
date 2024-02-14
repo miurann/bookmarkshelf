@@ -1,6 +1,6 @@
 <div class="mt-4 relative">
   <% if @bookmarks.present? %>
-    <div class="flex flex-wrap">
+    <div class="flex flex-wrap z-40 absolute">
       <%= render @bookmarks %>
     </div>
   <% else %>
@@ -8,13 +8,13 @@
   <% end %>
   <div class="absolute top-40">
     <div class="flex flex-col">
-      <div class="h-40">
+      <div class="h-40 z-0">
         <%= image_tag 'woodframe03.jpg' %>
       </div>
-      <div class="h-40">
+      <div class="h-40 z-0">
         <%= image_tag 'woodframe03.jpg' %>
       </div>
-      <div class="h-40">
+      <div class="h-40 z-0">
         <%= image_tag 'woodframe03.jpg' %>
       </div>
     </div>
