@@ -26,7 +26,7 @@ class BookmarksController < ApplicationController
 
   def update
     if @bookmark.update(bookmark_params)
-      redirect_to root_path, notice: "Bookmark was successfully updated!"
+      redirect_to bookmark_path, notice: "Bookmark was successfully updated!"
     else
       render :edit
     end
