@@ -45,6 +45,7 @@ gem "bootsnap", require: false
 # gem "image_processing", "~> 1.2"
 
 gem 'cssbundling-rails'
+gem 'kaminari', '~> 1.1'
 gem 'rails-i18n', '~> 7.0.0'
 gem 'ransack', '~> 4.1'
 gem 'sorcery'
