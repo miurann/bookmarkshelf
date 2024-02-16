@@ -8,6 +8,13 @@ ja:
     message:
       require_login: 'ログインしてください'
       delete_confirm: '削除しますか？'
+  views:
+    pagination:
+      first: '最初'
+      last: '最後'
+      previous: '«'
+      next: '»'
+      truncate: '...'
   users:
     new:
       title: 'ユーザー登録'

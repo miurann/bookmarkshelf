@@ -2,7 +2,7 @@ class BookmarksController < ApplicationController
   before_action :set_bookmark, only: %i[ edit update destroy ]
   def index
     @q = Bookmark.ransack(params[:q])
-    @bookmarks = @q.result(distinct: true).includes(:user).order(created_at: :desc)
+    @bookmarks = @q.result(distinct: true).includes(:user).order(created_at: :desc).page(params[:page])
   end
 
   def new
