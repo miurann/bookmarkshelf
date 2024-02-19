@@ -19,13 +19,10 @@
       </div>
     </div>
   </div>
-</div>
 
-<div class="mt-6 w-auto absolute bottom-20 z-40">
-<div class="flex justify-center">
-  <div class="absolute bottom-0 mb-20 mx-auto join z-30">
-    <%= paginate @bookmarks %>
-  </div>
 </div>
-  <%= render 'search_form', url: bookmarks_path %>
+  <div class="mt-6 w-full absolute bottom-20 z-40">
+    <div class="flex justify-center">
+      <%= paginate @bookmarks %>
+  </div>
 </div>

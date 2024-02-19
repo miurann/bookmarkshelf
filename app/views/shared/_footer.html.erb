@@ -1,5 +1,13 @@
-<footer class="footer footer-center p-4 bg-base-300 text-base-content h-16 absolute bottom-0">
-  <aside>
-    <p>Copyright © 2024 - All right reserved by ACME Industries Ltd</p>
-  </aside>
+<footer class="footer footer-center flex flex-row p-4 bg-base-300 text-base-content h-16 absolute bottom-0 opacity-75 hover:opacity-100">
+  <div class="flex flex-row mx-auto justify-center opacity-100">
+    <%= render 'bookmarks/search_form', url: bookmarks_path %>
+  </div>
+  <div class="dropdown dropdown-top dropdown-end">
+  <div tabindex="0" role="button" class="m-1"><i class="fa-regular fa-circle-question fa-lg"></i></div>
+  <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+    <li><%= t('defaults.terms') %></li>
+    <li><%= t('defaults.privacy_policy') %></li>
+    <li><%= t('defaults.contact') %></li>
+  </ul>
+</div>
 </footer>
