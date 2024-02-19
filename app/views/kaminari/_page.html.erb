@@ -1,3 +1,3 @@
-<span class="join-item btn btn-sm glass <%= ' btn-active' if page.current? %> opacity-75">
+<span class="join-item btn btn-sm <%= ' btn-primary' if page.current? %><%= ' glass' unless page.current? %> opacity-75">
   <%= link_to_unless page.current?, page, url, {remote: remote, rel: page.rel} %>
 </span>

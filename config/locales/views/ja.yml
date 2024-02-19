@@ -5,6 +5,9 @@ ja:
     logout: 'ログアウト'
     search: '検索'
     keyword_search: 'キーワード検索'
+    privacy_policy: 'プライバシーポリシー'
+    terms: '利用規約'
+    contact: 'お問い合わせ'
     message:
       require_login: 'ログインしてください'
       delete_confirm: '削除しますか？'
