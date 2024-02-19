@@ -1,6 +1,6 @@
 <div class="mt-4 relative">
   <% if @bookmarks.present? %>
-    <div class="flex flex-wrap-reverse flex-row-reverse z-30 absolute">
+    <div class="flex flex-wrap-reverse flex-row-reverse absolute z-20">
       <%= render @bookmarks %>
     </div>
   <% else %>
@@ -20,11 +20,12 @@
     </div>
   </div>
 </div>
+
+<div class="mt-6 w-auto absolute bottom-20 z-40">
 <div class="flex justify-center">
-  <div class="absolute bottom-0 mb-20 mx-auto join z-40">
+  <div class="absolute bottom-0 mb-20 mx-auto join z-30">
     <%= paginate @bookmarks %>
   </div>
 </div>
-<div class="mt-6 w-auto>
   <%= render 'search_form', url: bookmarks_path %>
 </div>
