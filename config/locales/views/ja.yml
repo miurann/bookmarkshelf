@@ -1,5 +1,6 @@
 ja:
   defaults:
+    title: 'ブクマ図書館'
     login: 'ログイン'
     register: '登録'
     logout: 'ログアウト'
