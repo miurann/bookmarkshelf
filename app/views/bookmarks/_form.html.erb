@@ -1,15 +1,17 @@
+<div class="w-full">
 <%= form_with(model: bookmark) do |form| %>
   <%= render 'shared/error_messages', object: form.object %>
 
   <%= form.label :title, style: "display: block" %>
-  <%= form.text_field :title, class: 'input input-bordered input-sm w-full max-w-xs my-3' %>
+  <%= form.text_field :title, class: 'input input-bordered input-sm w-full my-3' %>
 
   <%= form.label :url, style: "display: block" %>
-  <%= form.text_field :url, class: 'input input-bordered input-sm w-full max-w-xs my-3' %>
+  <%= form.text_field :url, class: 'input input-bordered input-sm w-full my-3' %>
 
   <%= form.label :memo, style: "display: block"  %>
-  <%= form.text_area :memo, class: 'textarea textarea-bordered w-full max-w-xs my-3' %>
+  <%= form.text_area :memo, class: 'textarea textarea-bordered w-full my-3' %>
   <div>
     <%= form.submit t('defaults.register'), class:'btn btn-primary' %>
   </div>
 <% end %>
+</div>
