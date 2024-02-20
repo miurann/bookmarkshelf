@@ -1,8 +1,6 @@
 class BookmarksController < ApplicationController
   before_action :set_bookmark, only: %i[ edit update destroy ]
-  def index
-
-  end
+  def index; end
 
   def new
     @bookmark = Bookmark.new
