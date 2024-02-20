@@ -9,7 +9,25 @@ module.exports = {
     extend: {
       backgroundImage: {
         'shelf-pattern': "url('bacground01.jpg')",
+      },
+      fontFamily: {
+        bad:["'Bad Script'"],
+        mplus: ["'M PLUS Rounded 1c'"]
       }
+    },
+    fontFamily: {
+      body: [
+        'Calibri',
+        'Gadugi',
+        'Geneva',
+        'EuphemiaUCAS',
+        'ヒラギノ角ゴシック',
+        '"Hiragino Sans"',
+        '"Yu Gothic UI"',
+        'メイリオ',
+        '"Hiragino Kaku Gothic ProN"',
+        '"ヒラギノ角ゴ ProN W3"',
+      ],
     }
   },
   daisyui: {
@@ -29,5 +47,5 @@ module.exports = {
       },
     ],
   },
-  plugins: [require("daisyui")]
+  plugins: [require('@tailwindcss/typography'), require("daisyui")]
 }
