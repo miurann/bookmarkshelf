@@ -1,4 +1,4 @@
-# fly.toml app configuration file generated for bookmarklibrary on 2024-02-07T03:05:17+09:00
+# fly.toml app configuration file generated for bookmarklibrary on 2024-02-21T08:37:36+09:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
@@ -36,9 +36,9 @@ console_command = '/rails/bin/rails console'
       X-Forwarded-Proto = 'https'
 
 [[vm]]
+  memory = '512mb'
   cpu_kind = 'shared'
   cpus = 1
-  memory_mb = 256
 
 [[statics]]
   guest_path = '/rails/public'
