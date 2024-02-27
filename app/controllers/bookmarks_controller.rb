@@ -23,7 +23,7 @@ class BookmarksController < ApplicationController
 
   def update
     if @bookmark.update(bookmark_params)
-      redirect_to bookmark_path, notice: "Bookmark was successfully updated!"
+      redirect_to bookmarks_path, success: t('defaults.messages.update')
     else
       render :edit
     end
@@ -31,7 +31,7 @@ class BookmarksController < ApplicationController
 
   def destroy
     @bookmark.destroy!
-    redirect_to root_path, notice: "Bookmark was successfully destroyed."
+    redirect_to root_path, notice: t('defaults.messages.destroy')
   end
 
   private
