@@ -9,9 +9,13 @@ ja:
     privacy_policy: 'プライバシーポリシー'
     terms: '利用規約'
     contact: 'お問い合わせ'
-    message:
+    messages:
       require_login: 'ログインしてください'
       delete_confirm: '削除しますか？'
+      failed_login: 'ログインできませんでした'
+      success_logout: 'ログアウトしました'
+      update: '更新しました'
+      destroy: '削除しました'
   views:
     pagination:
       first: '最初'

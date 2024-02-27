@@ -4,15 +4,15 @@ class UserSessionsController < ApplicationController
     @user = login(params[:email], params[:password])
 
     if @user
-      redirect_back_or_to(bookmarks_path, notice: 'Login successful')
+      redirect_back_or_to bookmarks_path
     else
-      flash.now[:alert] = 'Login failed'
+      flash.now[:notice] = t('defaults.messages.failed_login')
       render action: 'new'
     end
   end
 
   def destroy
     logout
-    redirect_to root_path
+    redirect_to root_path, success: t('defaults.messages.success_logout')
   end
 end
