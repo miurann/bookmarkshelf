@@ -5,4 +5,8 @@ class StaticPagesController < ApplicationController
       redirect_to bookmarks_path
     end
   end
+
+  def terms; end
+
+  def privacy_policy; end
 end
