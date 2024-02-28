@@ -6,8 +6,10 @@ class ApplicationController < ActionController::Base
   private
 
   def set_search
-    @q = Bookmark.ransack(params[:q])
-    @bookmarks = @q.result(distinct: true).includes(:user).order(created_at: :desc).page(params[:page])
+    if logged_in?
+      @q = current_user.bookmarks.ransack(params[:q])
+      @bookmarks = @q.result(distinct: true).includes(:user).order(created_at: :desc).page(params[:page])
+    end
   end
 
   def not_authenticated
