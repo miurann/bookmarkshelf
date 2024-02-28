@@ -1,0 +1,10 @@
+<div class="card w-52 h-32 bg-base-100 shadow-xl mr-4">
+  <div class="card-body h-32 p-3">
+    <p><%= bookmark.title.truncate(24) %></p>
+    <%= link_to bookmark.url, target: '_blank' do %>
+      <p class="text-xs link hover:link-secondary">
+      <%= bookmark.url.truncate(24) %><i class="fa-solid fa-earth-asia"></i>
+      </p>
+      <% end %>
+  </div>
+</div>
