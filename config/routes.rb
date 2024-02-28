@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   delete 'logout', to: 'user_sessions#destroy'
   get 'privacy_policy', to: 'static_pages#privacy_policy'
   get 'terms', to: 'static_pages#terms'
-  resources :users
+  resources :users, only: %i[new create]
   resources :bookmarks
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
