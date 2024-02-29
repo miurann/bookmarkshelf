@@ -5,7 +5,7 @@ ja:
     register: '登録'
     logout: 'ログアウト'
     search: '検索'
-    keyword_search: 'キーワード検索'
+    bookmark_search: 'ブックマーク検索'
     privacy_policy: 'プライバシーポリシー'
     terms: '利用規約'
     contact: 'お問い合わせ'
@@ -14,7 +14,7 @@ ja:
       delete_confirm: '削除しますか？'
       success_logout: 'ログアウトしました'
       success_signup: 'ユーザー登録が完了しました'
-      create: '作成しました'
+      create: '登録しました'
       update: '更新しました'
       destroy: '削除しました'
   views:

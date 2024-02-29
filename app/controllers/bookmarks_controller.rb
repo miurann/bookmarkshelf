@@ -9,7 +9,7 @@ class BookmarksController < ApplicationController
   def create
     @bookmark = current_user.bookmarks.build(bookmark_params)
     if @bookmark.save
-      redirect_to root_path, success: t('defaults.messages.create')
+      redirect_to bookmarks_path, success: t('defaults.messages.create')
     else
       render :new, status: :unprocessable_entity
     end
