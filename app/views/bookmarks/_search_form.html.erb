@@ -1,4 +1,4 @@
 <%= search_form_for @q, url: url do |f| %>
-    <%= f.search_field :title_or_memo_cont, placeholder: t('defaults.keyword_search'), class: 'input input-sm input-bordered w-80 max-w-full' %>
+    <%= f.search_field :title_or_memo_cont, placeholder: t('defaults.bookmark_search'), class: 'input input-sm input-bordered w-80 max-w-full' %>
     <%= f.submit t('defaults.search'), class: 'btn btn-primary btn-sm' %>
 <% end %>
