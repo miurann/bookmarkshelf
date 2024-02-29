@@ -11,3 +11,8 @@
     link "ブックマーク編集"
     parent :bookmark, bookmark
   end
+
+  crumb :create_bookmark do |bookmark|
+    link "ブックマーク登録"
+    parent :bookmarks
+  end
