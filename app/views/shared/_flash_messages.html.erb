@@ -1,3 +1,8 @@
 <% flash.each do |message_type, message| %>
-  <div role="alert" class="alert alert-<%= message_type %> flex justify-center absolute z-40 opacity-75"><%= message %></div>
+  <div data-controller="flash" role="alert" class="flex justify-center absolute z-40 opacity-75 alert alert-<%= message_type %>">
+    <%= message %>
+    <button type="button" data-action="click->flash#dismiss">
+      <i class="fa-regular fa-circle-xmark"></i>
+    </button>
+  </div>
 <% end %>

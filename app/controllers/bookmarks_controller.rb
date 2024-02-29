@@ -9,9 +9,9 @@ class BookmarksController < ApplicationController
   def create
     @bookmark = current_user.bookmarks.build(bookmark_params)
     if @bookmark.save
-      redirect_to root_path
+      redirect_to root_path, success: t('defaults.messages.create')
     else
-      render :new
+      render :new, status: :unprocessable_entity
     end
   end
 
@@ -23,13 +23,13 @@ class BookmarksController < ApplicationController
     if @bookmark.update(bookmark_params)
       redirect_to bookmarks_path, success: t('defaults.messages.update')
     else
-      render :edit
+      render :edit, status: :unprocessable_entity
     end
   end
 
   def destroy
     @bookmark.destroy!
-    redirect_to root_path, notice: t('defaults.messages.destroy')
+    redirect_to root_path, info: t('defaults.messages.destroy')
   end
 
   private
