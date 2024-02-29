@@ -9,9 +9,9 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       auto_login(@user)
-      redirect_to bookmarks_path, notice: t('defaults.messages.success_signup')
+      redirect_to bookmarks_path, success: t('defaults.messages.success_signup')
     else
-      render :new
+      render :new, status: :unprocessable_entity
     end
   end
 

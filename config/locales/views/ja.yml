@@ -12,9 +12,9 @@ ja:
     messages:
       require_login: 'ログインしてください'
       delete_confirm: '削除しますか？'
-      failed_login: 'ログインできませんでした'
       success_logout: 'ログアウトしました'
       success_signup: 'ユーザー登録が完了しました'
+      create: '作成しました'
       update: '更新しました'
       destroy: '削除しました'
   views:
