@@ -1,5 +1,5 @@
 <% flash.each do |message_type, message| %>
-  <div data-controller="flash" role="alert" class="flex justify-center absolute z-40 opacity-75 alert alert-<%= message_type %>">
+  <div data-controller="flash" role="alert" class="alert alert-<%= message_type %> flex justify-center absolute z-40 opacity-75">
     <%= message %>
     <button type="button" data-action="click->flash#dismiss">
       <i class="fa-regular fa-circle-xmark"></i>
