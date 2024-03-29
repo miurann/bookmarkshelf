@@ -1,7 +1,7 @@
 class Bookmark < ApplicationRecord
   belongs_to :user
 
-  validates :url, presence: true
+  validates :url, presence: true, format: /\A#{URI::regexp(%w(http https))}\z/
   validates :title, length: { maximum: 255 }
   validates :memo, length: { maximum: 65535 }
 
