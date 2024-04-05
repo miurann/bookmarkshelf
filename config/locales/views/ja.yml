@@ -43,3 +43,6 @@ ja:
       title: 'ブックマーク詳細'
     edit:
       title: 'ブックマーク編集'
+  tags:
+    index:
+      title: 'タグ一覧'
