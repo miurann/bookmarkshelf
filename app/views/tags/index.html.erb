@@ -3,16 +3,8 @@
 </div>
 <div class="card w-3/5 mt-6 mx-auto bg-white opacity-75">
   <div class="overflow-auto">
-    <table class="table my-8 w-4/5 mx-auto">
-      <thead>
-        <tr>
-          <th><%= Tag.human_attribute_name(:name) %></th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody>
-        <%= render @tags %>
-      </tbody>
-    </table>
+    <div class="container my-8 w-4/5 mx-auto flex flex-col px-10">
+      <%= render @tags %>
+    </div>
   </div>
 </div>
