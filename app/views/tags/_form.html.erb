@@ -1,0 +1,20 @@
+<%= turbo_frame_tag tag do %>
+  <div class="w-full py-1">
+    <%= form_with(model: tag) do |form| %>
+      <%= render 'shared/error_messages', object: form.object %>
+      <div class="flex flex-row">
+        <div class="w-3/5">
+          <%= form.text_field :name, class: 'input input-bordered input-sm w-full' %>
+        </div>
+        <div class="w-2/5 flex justify-end">
+          <div>
+            <%= form.submit t('defaults.register'), class:'btn btn-primary btn-sm mx-2' %>
+          </div>
+          <div>
+            <%= link_to t('defaults.cancel'), tag, class: "btn btn-sm  btn-accent text-xs" %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<% end %>
