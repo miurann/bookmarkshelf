@@ -4,7 +4,13 @@
 <div class="card w-3/5 mt-6 mx-auto bg-white opacity-75">
   <div class="overflow-auto">
     <div class="container my-8 w-4/5 mx-auto flex flex-col px-10">
-      <%= render @tags %>
+      <div class=" flex justify-end">
+        <%= link_to '登録', new_tag_path, class: "btn btn-primary", data: { turbo_frame: "new_tag" } %>
+      </div>
+      <%= turbo_frame_tag "new_tag" %>
+      <div id="tags">
+        <%= render @tags %>
+      </div>
     </div>
   </div>
 </div>
