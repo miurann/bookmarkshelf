@@ -24,7 +24,7 @@ class TagsController < ApplicationController
 
   def destroy
     @tag.destroy!
-    redirect_to tags_path, info: t('defaults.messages.destroy')
+    flash.now.notice = "ねこを削除しました。"
   end
 
   private
