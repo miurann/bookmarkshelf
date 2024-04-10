@@ -5,9 +5,16 @@ class TagsController < ApplicationController
   end
 
   def new
+    @tag = Tag.new
   end
 
   def create
+    @tag = current_user.tags.build(tag_params)
+    if @tag.save
+      flash.now.notice = "ねこを登録しました。"
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   def show; end
