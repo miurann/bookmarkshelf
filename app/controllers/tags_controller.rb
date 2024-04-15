@@ -11,7 +11,7 @@ class TagsController < ApplicationController
   def create
     @tag = current_user.tags.build(tag_params)
     if @tag.save
-      flash.now.notice = "ねこを登録しました。"
+      flash.now.notice = t('defaults.messages.create')
     else
       render :new, status: :unprocessable_entity
     end
@@ -23,7 +23,7 @@ class TagsController < ApplicationController
 
   def update
     if @tag.update(tag_params)
-      redirect_to @tag, success: t('defaults.messages.update')
+      flash.now.notice = t('defaults.messages.update')
     else
       render :edit, status: :unprocessable_entity
     end
@@ -31,7 +31,7 @@ class TagsController < ApplicationController
 
   def destroy
     @tag.destroy!
-    flash.now.notice = "ねこを削除しました。"
+    flash.now.notice = t('defaults.messages.destroy')
   end
 
   private
