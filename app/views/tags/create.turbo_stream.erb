@@ -1,2 +1,3 @@
 <%= turbo_stream.prepend "tags", @tag %>
 <%= turbo_stream.update Tag.new, "" %>
+<%= turbo_stream.update "flash", partial: "shared/flash_messages" %>

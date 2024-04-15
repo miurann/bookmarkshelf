@@ -29,7 +29,7 @@ class BookmarksController < ApplicationController
 
   def destroy
     @bookmark.destroy!
-    redirect_to root_path, info: t('defaults.messages.destroy')
+    redirect_to root_path, success: t('defaults.messages.destroy')
   end
 
   private

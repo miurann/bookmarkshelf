@@ -11,6 +11,6 @@ class UserSessionsController < ApplicationController
 
   def destroy
     logout
-    redirect_to root_path, info: t('defaults.messages.success_logout')
+    redirect_to root_path, success: t('defaults.messages.success_logout')
   end
 end
