@@ -8,6 +8,13 @@
       <h2 class="card-title"><%= @bookmark.title %></h2>
       <%= render 'crud_menus' %>
     </div>
+    <div class="flex flex-row">
+      <% @bookmark.tags.each do |tag| %>
+        <div class="badge badge-info mr-2">
+          <%= tag.name %>
+        </div>
+      <% end %>
+    </div>
     <%= link_to @bookmark.url, @bookmark.url, class:'link link-primary', target: '_blank' %>
     <p><%= @bookmark.memo %></p>
   </div>

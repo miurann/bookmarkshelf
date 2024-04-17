@@ -1,8 +1,9 @@
 <div class="w-fit mx-auto mt-8">
   <h1 class="font-mplus text-xl text-secondary"><%= t'.title' %></h1>
 </div>
+  <div class="h-2/3 overflow-auto">
 <div class="card w-3/5 mt-6 mx-auto bg-white opacity-75">
-  <div class="overflow-auto">
+
     <div class="container my-8 w-4/5 mx-auto flex flex-col px-10">
       <div class=" flex justify-end">
         <%= link_to t('.new_button'), new_tag_path, class: "btn btn-secondary", data: { turbo_frame: "new_tag" } %>
