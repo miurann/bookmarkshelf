@@ -3,6 +3,7 @@ ja:
     models:
       user: 'ユーザー'
       bookmark: '掲示板'
+      tag: 'タグ'
     attributes:
       user:
         name: '名前'
