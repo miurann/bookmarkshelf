@@ -1,7 +1,7 @@
   <%= link_to bookmark_path(bookmark) do %>
   <div class="flex flex-row">
     <div class="h-40 flex flex-col justify-end">
-      <%= image_tag 'book01.png', class: 'h-32' %>
+      <%= image_tag bookmark.cover_image.image.url, class: 'h-32' %>
     </div>
     <% if request.url.include?("commit") %>
     <div class="flex flex-col justify-end">
