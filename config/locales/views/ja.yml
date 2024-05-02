@@ -10,6 +10,7 @@ ja:
     terms: '利用規約'
     contact: 'お問い合わせ'
     cancel: 'キャンセル'
+    password_reset: 'パスワードリセット'
     messages:
       require_login: 'ログインしてください'
       delete_confirm: '削除しますか？'
@@ -48,3 +49,14 @@ ja:
     index:
       title: 'タグ一覧'
       new_button: '新規作成'
+  password_resets:
+    new:
+      title: 'パスワードリセット申請'
+      submit: '送信'
+    edit:
+      title: 'パスワードリセット'
+    create:
+      success: 'パスワードリセット手順を送信しました'
+    update:
+      success: 'パスワードを変更しました'
+      fail: 'パスワードの変更に失敗しました'

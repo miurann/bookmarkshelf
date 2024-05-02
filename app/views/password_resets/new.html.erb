@@ -1,0 +1,14 @@
+<div class="w-fit mx-auto mt-16">
+  <h1 class="font-bad text-3xl text-secondary">Start to Reset Password</h1>
+</div>
+<div class="container mx-auto w-1/3 my-16">
+  <%= form_with url: password_resets_path, local: true do |form| %>
+    <div class="field">
+      <%= form.label :email, User.human_attribute_name(:email), class: 'text-neutral' %>
+      <%= form.email_field :email, class: 'input input-bordered input-sm w-full my-3' %>
+    </div>
+    <div class="actions">
+      <%= form.submit t('password_resets.new.submit'), class:'btn btn-primary' %>
+    </div>
+  <% end %>
+</div>
