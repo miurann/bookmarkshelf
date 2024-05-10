@@ -19,6 +19,7 @@ ja:
       create: '登録しました'
       update: '更新しました'
       destroy: '削除しました'
+      reset_password_subject: '【ブクマ図書館】パスワードリセットのご案内'
   views:
     pagination:
       first: '最初'
