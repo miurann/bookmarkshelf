@@ -16,8 +16,10 @@ ja:
       delete_confirm: '削除しますか？'
       success_logout: 'ログアウトしました'
       success_signup: 'ユーザー登録が完了しました'
+      destroy_user: 'アカウントを削除しました'
       create: '登録しました'
       update: '更新しました'
+      un_update: '更新できませんでした'
       destroy: '削除しました'
       reset_password_subject: '【ブクマ図書館】パスワードリセットのご案内'
   views:
@@ -61,3 +63,6 @@ ja:
     update:
       success: 'パスワードを変更しました'
       fail: 'パスワードの変更に失敗しました'
+  profile:
+    show:
+      title: 'プロフィール'
