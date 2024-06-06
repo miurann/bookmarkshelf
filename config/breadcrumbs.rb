@@ -16,3 +16,8 @@
     link "ブックマーク登録"
     parent :bookmarks
   end
+
+  crumb :profile do
+    link "プロフィール"
+    parent :bookmarks
+  end
