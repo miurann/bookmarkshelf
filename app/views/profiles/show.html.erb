@@ -8,9 +8,8 @@
       <li><%= @user.name %></li>
       <li><%= @user.email %></li>
     <div class="card-actions justify-end">
-    <%= link_to edit_profile_path do %>
-      <button class="btn btn-secondary">アカウント編集</button>
-    <% end %>
+    <%= link_to t('.edit_button'), edit_profile_path, class:'btn btn-secondary' %>
+    <%= button_to t('.delete_button'), profile_path, class:'btn btn-accent', method: :delete, form: { data: { turbo_confirm: t('defaults.messages.delete_confirm') } } %>
     </div>
   </div>
 </div>

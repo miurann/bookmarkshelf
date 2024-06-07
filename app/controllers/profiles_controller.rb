@@ -16,7 +16,7 @@ class ProfilesController < ApplicationController
 
     def destroy
       @user.destroy!
-        redirect_to root_path, notice: t(defaults.messages.destroy_user)
+        redirect_to root_path, notice: t('defaults.messages.destroy_user')
     end
 
   private
