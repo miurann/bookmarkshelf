@@ -63,6 +63,8 @@ ja:
     update:
       success: 'パスワードを変更しました'
       fail: 'パスワードの変更に失敗しました'
-  profile:
+  profiles:
     show:
       title: 'プロフィール'
+      edit_button: 'アカウント編集'
+      delete_button: 'アカウント削除'
