@@ -1,75 +1,75 @@
 CoverImage.create!(
   [
     {
-      image: File.open('./app/assets/images/book01.png'),
+      image: File.open('./app/assets/images/book28.png'),
       standard: true
     },
     {
-      image: File.open('./app/assets/images/book02.png'),
+      image: File.open('./app/assets/images/book29.png'),
       standard: true
     },
     {
-      image: File.open('./app/assets/images/book03.png'),
+      image: File.open('./app/assets/images/book30.png'),
       standard: true
     },
     {
-      image: File.open('./app/assets/images/book04.png'),
+      image: File.open('./app/assets/images/book31.png'),
       standard: true
     },
     {
-      image: File.open('./app/assets/images/book05.png'),
+      image: File.open('./app/assets/images/book32.png'),
       standard: true
     },
     {
-      image: File.open('./app/assets/images/book06.png'),
+      image: File.open('./app/assets/images/book33.png'),
       standard: true
     },
     {
-      image: File.open('./app/assets/images/book07.png'),
+      image: File.open('./app/assets/images/book34.png'),
       standard: true
     },
     {
-      image: File.open('./app/assets/images/book08.png'),
+      image: File.open('./app/assets/images/book35.png'),
       standard: true
     },
     {
-      image: File.open('./app/assets/images/book09.png'),
+      image: File.open('./app/assets/images/book36.png'),
       standard: true
     },
     {
-      image: File.open('./app/assets/images/book10front.png'),
+      image: File.open('./app/assets/images/book19front.png'),
       standard: false
     },
     {
-      image: File.open('./app/assets/images/book11front.png'),
+      image: File.open('./app/assets/images/book20front.png'),
       standard: false
     },
     {
-      image: File.open('./app/assets/images/book12front.png'),
+      image: File.open('./app/assets/images/book21front.png'),
       standard: false
     },
     {
-      image: File.open('./app/assets/images/book13front.png'),
+      image: File.open('./app/assets/images/book22front.png'),
       standard: false
     },
     {
-      image: File.open('./app/assets/images/book14front.png'),
+      image: File.open('./app/assets/images/book23front.png'),
       standard: false
     },
     {
-      image: File.open('./app/assets/images/book15front.png'),
+      image: File.open('./app/assets/images/book24front.png'),
       standard: false
     },
     {
-      image: File.open('./app/assets/images/book16front.png'),
+      image: File.open('./app/assets/images/book25front.png'),
       standard: false
     },
     {
-      image: File.open('./app/assets/images/book17front.png'),
+      image: File.open('./app/assets/images/book26front.png'),
       standard: false
     },
     {
-      image: File.open('./app/assets/images/book18front.png'),
+      image: File.open('./app/assets/images/book27front.png'),
       standard: false
     },
   ]
