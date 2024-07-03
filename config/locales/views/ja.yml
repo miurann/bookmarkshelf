@@ -44,6 +44,9 @@ ja:
       no_result: 'ブックマークがありません'
     new:
       title: 'ブックマーク登録'
+      no_tags: 'タグがまだ作成されていません'
+    form:
+      no_tags: 'タグがまだ作成されていません'
     show:
       title: 'ブックマーク詳細'
     edit:

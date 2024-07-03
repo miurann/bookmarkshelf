@@ -4,6 +4,7 @@ ja:
       user: 'ユーザー'
       bookmark: '掲示板'
       tag: 'タグ'
+      cover_image: '表紙'
     attributes:
       user:
         name: '名前'

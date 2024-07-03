@@ -12,31 +12,38 @@
   <%= form.text_area :memo, class: 'textarea textarea-bordered w-full my-3' %>
 
   <div class="form-group">
-  <%= form.label Tag.model_name.human, class: 'text-neutral' %>
-    <div class="flex flex-row flex-wrap">
-      <%= form.collection_check_boxes :tag_ids, current_user.tags.all, :id, :name do |b| %>
-        <div class="flex flex-row">
-          <div class="text-white">
-            <%= b.label %>
+    <%= form.label Tag.model_name.human, class: 'text-neutral' %>
+    <% if current_user.tags.present? %>
+      <div class="flex flex-row flex-wrap">
+        <%= form.collection_check_boxes :tag_ids, current_user.tags.all, :id, :name do |b| %>
+          <div class="flex flex-row">
+            <div class="text-white">
+              <%= b.label %>
+            </div>
+            <div class="mr-3">
+              <%= b.check_box(class: 'checkbox checkbox-accent') %>
+            </div>
           </div>
-          <div class="mr-3">
-            <%= b.check_box(class: 'checkbox checkbox-accent') %>
-          </div>
-        </div>
-      <% end %>
-    </div>
-  </div>
-
-  <div class="flex flex-row flex-wrap">
-    <%= form.collection_radio_buttons(:cover_image_id, CoverImage.all, :id , :image) do |b| %>
-      <div class="mx-2">
-        <%= b.radio_button %>
-        <%= b.label{ image_tag b.text.url, class: 'max-w-20 h-28' } %>
+        <% end %>
       </div>
+    <% else %>
+      <p class="text-secondary"><%= t('.no_tags') %></p>
     <% end %>
   </div>
 
-  <div>
+  <div class="form-group">
+    <%= form.label CoverImage.model_name.human, class: 'text-neutral' %>
+      <div class="flex flex-row flex-wrap">
+        <%= form.collection_radio_buttons(:cover_image_id, CoverImage.all, :id , :image, { checked: CoverImage.first.id }) do |b| %>
+          <div class="mx-2">
+            <%= b.radio_button %>
+            <%= b.label{ image_tag b.text.url, class: 'max-w-20 h-28' } %>
+          </div>
+        <% end %>
+      </div>
+  </div>
+
+  <div class="mt-2">
     <%= form.submit t('defaults.register'), class:'btn btn-primary' %>
   </div>
 <% end %>
