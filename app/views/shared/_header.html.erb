@@ -1,6 +1,9 @@
-<div class="navbar bg-cover bg-center bg-[url('whitebook01.png')] h-16">
+<div class="navbar bg-white h-16 z-40">
   <div class="flex-1 ml-10">
-    <%= link_to 'Bookmark Library', root_path, class: 'btn btn-ghost text-xl font-bad' %>
+    <%= link_to  root_path, class: 'link link-hover text-xl font-bad' do %>
+      <%= image_tag 'topimage01.png', size: '70x55' %>
+    <% end %>
+    <%= image_tag 'cat01.png', size: '35x40' %>
   </div>
   <% if logged_in? %>
     <div class="flex-none gap-2">
