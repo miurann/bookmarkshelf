@@ -17,8 +17,12 @@
   <div class="w-screem" id="flash">
     <%= render "shared/flash_messages" %>
   </div>
-  <body class="font-body flex flex-col h-screen justify-between">
+  <body class="font-body flex flex-col h-screen justify-between" >
+    <% unless logged_in? %>
+    <div class="w-screen h-screen bg-cover bg-fixed bg-[url('background09.jpg')]">
+    <% else %>
     <div class="w-screen h-screen bg-cover bg-fixed bg-[url('background06.png')]">
+    <% end %>
       <%= render 'shared/header' %>
       <%= yield %>
       <%= render 'shared/footer' %>
