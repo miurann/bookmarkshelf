@@ -1,11 +1,11 @@
 <div class="w-full">
   <%= form_with url: login_path, method: :post do |form| %>
     <div class="field">
-      <%= form.label :email, User.human_attribute_name(:email), class: 'text-neutral' %><br />
+      <%= form.label :email, User.human_attribute_name(:email), class: 'text-info' %><br />
       <%= form.text_field :email, class: 'input input-bordered input-sm w-full my-3' %>
     </div>
     <div class="field">
-      <%= form.label :password, User.human_attribute_name(:password), class: 'text-neutral' %><br />
+      <%= form.label :password, User.human_attribute_name(:password), class: 'text-info' %><br />
       <%= form.password_field :password, class: 'input input-bordered input-sm w-full my-3' %>
     </div>
     <div class="actions">

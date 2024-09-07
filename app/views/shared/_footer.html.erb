@@ -1,4 +1,4 @@
-<footer class="footer footer-center flex flex-row p-4 bg-base-300 text-base-content h-16 absolute bottom-0 z-40 opacity-75 hover:opacity-100">
+<footer class="footer footer-center flex flex-row p-4 bg-base-300 text-base-content fixed bottom-0 h-16 z-40 opacity-75 hover:opacity-100">
   <% if logged_in? %>
     <div class="flex flex-row mx-auto justify-center opacity-100">
       <%= render 'bookmarks/search_form', url: bookmarks_path %>
