@@ -5,4 +5,8 @@
   <div class="container mx-auto w-2/3 my-8">
     <%= render "form", user: @user %>
   </div>
+  <div class="flex flex-row justify-center">
+    <%= link_to t('defaults.terms'), terms_path, class:'text-accent link mr-3' %>
+    <%= link_to t('defaults.privacy_policy'), privacy_policy_path, class:'text-accent link' %>
+  </div>
 </div>
