@@ -21,7 +21,7 @@ class BookmarksController < ApplicationController
 
   def update
     if @bookmark.update(bookmark_params)
-      redirect_to bookmarks_path, success: t('defaults.messages.update')
+      redirect_to bookmark_path, success: t('defaults.messages.update')
     else
       render :edit, status: :unprocessable_entity
     end

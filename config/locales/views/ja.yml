@@ -11,6 +11,7 @@ ja:
     contact: 'お問い合わせ'
     cancel: 'キャンセル'
     password_reset: 'パスワードリセット'
+    return_bookmarks: '一覧へ戻る'
     messages:
       require_login: 'ログインしてください'
       delete_confirm: '削除しますか？'

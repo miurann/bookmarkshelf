@@ -8,14 +8,14 @@
       <h2 class="card-title"><%= @bookmark.title %></h2>
       <%= render 'crud_menus' %>
     </div>
-    <div class="flex flex-row">
+    <div class="flex flex-row flex-wrap">
       <% @bookmark.tags.each do |tag| %>
-        <div class="badge badge-info mr-2">
+        <div class="badge badge-info mr-2 mb-1">
           <%= tag.name %>
         </div>
       <% end %>
     </div>
-    <%= link_to @bookmark.url, @bookmark.url, class:'link link-primary', target: '_blank' %>
+    <%= link_to @bookmark.url, @bookmark.url, class:'link link-secondary', target: '_blank' %>
     <p><%= @bookmark.memo %></p>
   </div>
 </div>

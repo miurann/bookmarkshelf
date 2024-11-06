@@ -34,7 +34,7 @@
   <div class="form-group">
     <%= form.label CoverImage.model_name.human, class: 'text-neutral' %>
       <div class="flex flex-row flex-wrap">
-        <%= form.collection_radio_buttons(:cover_image_id, CoverImage.all, :id , :image, { checked: CoverImage.first.id }) do |b| %>
+        <%= form.collection_radio_buttons(:cover_image_id, CoverImage.all, :id , :image) do |b| %>
           <div class="mx-2">
             <%= b.radio_button %>
             <%= b.label{ image_tag b.text.url, class: 'max-w-20 h-28' } %>
