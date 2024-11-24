@@ -12,6 +12,7 @@ ja:
     cancel: 'キャンセル'
     password_reset: 'パスワードリセット'
     return_bookmarks: '一覧へ戻る'
+    search_by_tag: 'タグで絞り込む'
     messages:
       require_login: 'ログインしてください'
       delete_confirm: '削除しますか？'

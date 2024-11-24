@@ -8,7 +8,8 @@ class ApplicationController < ActionController::Base
   def set_search
     if logged_in?
       @q = current_user.bookmarks.ransack(params[:q])
-      @bookmarks = @q.result(distinct: true).includes(:user).order(created_at: :desc).page(params[:page])
+      @tags = current_user.tags
+      @bookmarks = @q.result(distinct: true).includes(:user, :tags).order(created_at: :desc).page(params[:page])
     end
   end
 
