@@ -1,9 +1,19 @@
+<% if logged_in? %>
+  <div class="drawer drawer-end">
+    <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
+  <div class="drawer-content">
+<% end %>
+<!-- Footer content -->
+
 <footer class="footer footer-center flex flex-row p-4 bg-base-300 text-base-content fixed bottom-0 h-16 z-40 opacity-75 hover:opacity-100">
   <% if logged_in? %>
     <div class="flex flex-row mx-auto justify-center opacity-100">
       <%= render 'bookmarks/search_form', url: bookmarks_path %>
+      <label for="my-drawer-4" class="drawer-button btn btn-sm btn-secondary"><i class="fa-solid fa-sliders"></i></label>
     </div>
+  </div>
   <% end %>
+
   <div class="dropdown dropdown-top dropdown-end<%= ' w-screen' unless logged_in? %> flex justify-end">
     <div tabindex="0" role="button" class="m-1"><i class="fa-regular fa-circle-question fa-lg"></i></div>
     <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
@@ -13,3 +23,32 @@
     </ul>
   </div>
 </footer>
+
+<!-- Right drawer content -->
+<% if logged_in? %>
+    <div class="drawer-side z-50">
+      <label for="my-drawer-4" aria-label="close sidebar" class="drawer-overlay"></label>
+      <div class="menu bg-base-200 text-base-content min-h-full w-80 p-4">
+      <% if current_user.tags.present? %>
+        <%= search_form_for @q, url: bookmarks_path do |f| %>
+          <div class="mb-4 font-mplus text-zinc-700 font-semibold text-xl flex flex-row justify-between place-content-end">
+            <%= f.label :tags_id_in, t('defaults.search_by_tag') %>
+            <%= image_tag 'cat02b.png', size: '70x70' %>
+          </div>
+          <div class="flex flex-row flex-wrap">
+            <%= f.collection_radio_buttons :tags_id_in, @tags, :id, :name do |b| %>
+            <div class="mb-2 mr-2 hover:text-primary">
+              <%= b.radio_button %> <%= b.label %>
+            </div>
+        <% end %>
+      </div>
+        <%= button_tag type: "submit", class: 'btn btn-primary btn-sm' do %>
+          <i class="fa-solid fa-magnifying-glass"></i>
+        <% end %>
+      <% end %>
+      <% else %>
+        <p><%= t('bookmarks.new.no_tags') %></p>
+      <% end %>
+    </div>
+  </div>
+<% end %>

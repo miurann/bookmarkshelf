@@ -1,7 +1,9 @@
 <%= search_form_for @q, url: url do |f| %>
     <%= f.search_field :title_or_memo_cont, placeholder: t('defaults.bookmark_search'), class: 'input input-sm input-bordered w-80 max-w-full' %>
-    <%= f.submit t('defaults.search'), class: 'btn btn-primary btn-sm' %>
+    <%= button_tag type: "submit", class: 'btn btn-primary btn-sm' do %>
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <% end %>
 <% end %>
-<% if request.url.include?("commit") %>
+<% if request.url.include?("button=") %>
   <%= link_to t('defaults.return_bookmarks'), bookmarks_path, class: 'btn btn-sm btn-secondary'%>
 <% end %>

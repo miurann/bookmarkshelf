@@ -3,7 +3,7 @@
     <div class="h-40 flex flex-col justify-end">
       <%= image_tag bookmark.cover_image.image.url, class: 'h-32' %>
     </div>
-    <% if request.url.include?("commit") %>
+    <% if request.url.include?("button=") %>
     <div class="flex flex-col justify-end">
       <%= render 'detail', bookmark: bookmark %>
     </div>
