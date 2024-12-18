@@ -73,3 +73,6 @@ ja:
       title: 'プロフィール'
       edit_button: 'アカウント編集'
       delete_button: 'アカウント削除'
+  static_pages:
+    top:
+      start_button: '登録して始めましょう'
