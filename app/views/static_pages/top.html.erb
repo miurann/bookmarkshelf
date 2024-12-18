@@ -1,44 +1,79 @@
-<div class="container w-2/3 mx-auto pt-20 flex justify-center items-center flex-col">
-  <%= image_tag 'topimage01.png', class: 'flex-none' %>
-  <div class="flex flex-row justify-center items-center">
-    <div class="w-1/2">
-      <%= image_tag 'desc01.png', size: '380x150' %>
-    </div>
-    <div class="w-1/2 flex justify-center">
-      <%= link_to '#guide' do %>
-        <%= image_tag 'howtocat03.png', size: '220x150', class: 'flex-none hover:animate-bounce' %>
-      <% end %>
-    </div>
-  </div>
+<div class="container w-2/3 mx-auto pt-12 flex justify-center items-center flex-col">
+  <%= image_tag 'topimage01.png', size: '450x350', class: 'flex-none' %>
+  <%= link_to '#guide' do %>
+    <%= image_tag 'top03b.png', size: '350x300', class:'hover:-translate-y-2 opacity-95' %>
+  <% end %>
 </div>
-<div id="guide">
-  <h2 class="mt-40">How to Use<h2>
-  <p>test</p>
-  <p>test</p>
-    <p>test</p>
-      <p>test</p>
-        <p>test</p>
-          <p>test</p>
-            <p>test</p>
-  <p>test</p>
-  <p>test</p>
-    <p>test</p>
-      <p>test</p>
-        <p>test</p>
-          <p>test</p>
-            <p>test</p>
-  <p>test</p>
-  <p>test</p>
-    <p>test</p>
-      <p>test</p>
-        <p>test</p>
-          <p>test</p>
-            <p>test</p>
-  <p>test</p>
-  <p>test</p>
-    <p>test</p>
-      <p>test</p>
-        <p>test</p>
-          <p>test</p>
-            <p>test</p>
+<div id="guide" class="pt-12">
+  <div class="my-20 flex justify-center opacity-80">
+    <%= image_tag 'frame04b.png', size: '300x80' %>
+  </div>
+  <div class="flex flex-col items-center">
+    <div class="card lg:card-side bg-base-100 shadow-xl w-2/3 opacity-95 mb-10">
+      <figure>
+        <div class="mockup-window bg-secondary w-96">
+          <div class="bg-base-200 flex justify-center px-2 py-3">
+            <%= image_tag 'howto01.png', size:'400x200' %>
+          </div>
+        </div>
+      </figure>
+      <div class="card-body whitespace-pre-wrap">
+        <h2 class="card-title font-mplus">ブックマークを登録</h2>
+        <p>
+          タイトル、URL、必要に応じてメモを入力し
+          保存したいページを簡単登録
+        </p>
+      </div>
+    </div>
+    <div class="card lg:card-side bg-base-100 shadow-xl w-2/3 opacity-95 mb-10">
+      <figure>
+        <div class="mockup-window bg-secondary w-96">
+          <div class="bg-base-200 flex justify-center px-2 py-3">
+            <%= image_tag 'howto02.png', size:'400x200' %>
+          </div>
+        </div>
+      </figure>
+      <div class="card-body whitespace-pre-wrap">
+        <h2 class="card-title font-mplus">本棚に本が並びます</h2>
+        <p>
+          登録したブックマークは本の背表紙で表示されます
+          どんどん登録して本棚を埋めていきましょう
+        </p>
+      </div>
+    </div>
+    <div class="card lg:card-side bg-base-100 shadow-xl w-2/3 opacity-95 mb-10">
+      <figure>
+        <div class="mockup-window bg-secondary w-96">
+          <div class="bg-base-200 flex justify-center px-2 py-3">
+            <%= image_tag 'howto03.png', size:'400x200' %>
+          </div>
+        </div>
+      </figure>
+      <div class="card-body whitespace-pre-wrap">
+        <h2 class="card-title font-mplus">登録したブックマークはどれ？</h2>
+        <p>
+          再びアクセスするにはキーワード検索が便利です
+          タイトルとメモに含まれるキーワードを検索すると
+          一覧に内容が表示されます
+        </p>
+      </div>
+    </div>
+    <div class="card lg:card-side bg-base-100 shadow-xl w-2/3 opacity-95 mb-10">
+      <figure>
+        <div class="mockup-window bg-secondary w-96">
+          <div class="bg-base-200 flex justify-center px-2 py-3">
+            <%= image_tag 'howto04.png', size:'400x200' %>
+          </div>
+        </div>
+      </figure>
+      <div class="card-body whitespace-pre-wrap">
+        <h2 class="card-title font-mplus">タグで絞り込み検索も</h2>
+        <p>
+          お好みのタグを作成してブックマークに登録しておけば
+          簡単に絞り込むこともできます
+        </p>
+      </div>
+    </div>
+    <%= link_to t('.start_button'),new_user_path, class:'btn btn-lg font-mplus btn-secondary mb-20' %>
+  </div>
 </div>
